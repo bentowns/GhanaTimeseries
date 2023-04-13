@@ -1,3 +1,4 @@
+#-------------------------------------------------------------------------------
 #Load driver
 source("0_Driver.R")
 #-------------------------------------------------------------------------------
@@ -193,24 +194,3 @@ SeptemberMean <- September / 39
 OctoberMean <- October / 39
 NovemberMean <- November / 39
 DecemberMean <- December / 39
-#-------------------------------------------------------------------------------
-#Create plots of the data
-#-------------------------------------------------------------------------------
-#First, find the max rainfall value (for setting limits)
-
-#probably in may, june or july
-plot(JanuaryMean, zlim = c(0,500))
-plot(FebruaryMean, zlim = c(0,500))
-plot(MarchMean, zlim = c(0,500))
-plot(AprilMean, zlim = c(0,500))
-plot(MayMean, zlim = c(0,500))
-plot(JuneMean, zlim = c(0,500))
-plot(JulyMean, zlim = c(0,500))
-plot(AugustMean, zlim = c(0,500))
-plot(SeptemberMean, zlim = c(0,500))
-plot(OctoberMean, zlim = c(0,500))
-plot(NovemberMean, zlim = c(0,500))
-plot(DecemberMean, zlim = c(0,500))
-#-------------------------------------------------------------------------------
-#Create gifs
-#-------------------------------------------------------------------------------
