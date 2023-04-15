@@ -2,24 +2,8 @@
 #Load Processed Images
 source("Code/1_ImageProcessing.R")
 #-------------------------------------------------------------------------------
-#Create plots of the data
+#Create dataframes for the purpose of gganimate
 #-------------------------------------------------------------------------------
-#First, find the max rainfall value (for setting limits)
-
-#probably in may, june or july
-JanPlot <- plot(JanuaryMean, zlim = c(0,500))
-FebPlot <- plot(FebruaryMean, zlim = c(0,500))
-plot(MarchMean, zlim = c(0,500))
-plot(AprilMean, zlim = c(0,500))
-plot(MayMean, zlim = c(0,500))
-plot(JuneMean, zlim = c(0,500))
-plot(JulyMean, zlim = c(0,500))
-plot(AugustMean, zlim = c(0,500))
-plot(SeptemberMean, zlim = c(0,500))
-plot(OctoberMean, zlim = c(0,500))
-plot(NovemberMean, zlim = c(0,500))
-plot(DecemberMean, zlim = c(0,500))
-
 JanuaryMean.df <- RasterToDataframe(JanuaryMean)
 FebruaryMean.df <- RasterToDataframe(FebruaryMean)
 MarchMean.df <- RasterToDataframe(MarchMean)

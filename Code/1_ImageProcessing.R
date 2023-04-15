@@ -47,7 +47,8 @@ Dec <- 12
 #-------------------------------------------------------------------------------
 #Part2.2: Create mean monthly rainfall rasters
 #-------------------------------------------------------------------------------
-January <- sum(TAMSATMonth.raster[[Jan+12]], TAMSATMonth.raster[[Jan+2*12]], TAMSATMonth.raster[[Jan+3*12]],
+#Get sums of each months
+JanuaryMean <- mean(TAMSATMonth.raster[[Jan+12]], TAMSATMonth.raster[[Jan+2*12]], TAMSATMonth.raster[[Jan+3*12]],
                TAMSATMonth.raster[[Jan+4*12]], TAMSATMonth.raster[[Jan+5*12]], TAMSATMonth.raster[[Jan+7*12]],
                TAMSATMonth.raster[[Jan+8*12]], TAMSATMonth.raster[[Jan+9*12]], TAMSATMonth.raster[[Jan+10*12]], TAMSATMonth.raster[[Jan+11*12]],
                TAMSATMonth.raster[[Jan+12*12]], TAMSATMonth.raster[[Jan+13*12]], TAMSATMonth.raster[[Jan+14*12]], TAMSATMonth.raster[[Jan+15*12]],
@@ -58,7 +59,7 @@ January <- sum(TAMSATMonth.raster[[Jan+12]], TAMSATMonth.raster[[Jan+2*12]], TAM
                TAMSATMonth.raster[[Jan+32*12]], TAMSATMonth.raster[[Jan+33*12]], TAMSATMonth.raster[[Jan+34*12]], TAMSATMonth.raster[[Jan+35*12]],
                TAMSATMonth.raster[[Jan+36*12]], TAMSATMonth.raster[[Jan+37*12]], TAMSATMonth.raster[[Jan+38*12]], TAMSATMonth.raster[[Jan+39*12]])
 
-February <- sum(TAMSATMonth.raster[[Feb]], TAMSATMonth.raster[[Feb+12]], TAMSATMonth.raster[[Feb+3*12]],
+FebruaryMean <- mean(TAMSATMonth.raster[[Feb]], TAMSATMonth.raster[[Feb+12]], TAMSATMonth.raster[[Feb+3*12]],
                TAMSATMonth.raster[[Feb+4*12]], TAMSATMonth.raster[[Feb+5*12]], TAMSATMonth.raster[[Feb+6*12]], TAMSATMonth.raster[[Feb+7*12]],
                TAMSATMonth.raster[[Feb+8*12]], TAMSATMonth.raster[[Feb+10*12]], TAMSATMonth.raster[[Feb+11*12]],
                TAMSATMonth.raster[[Feb+12*12]], TAMSATMonth.raster[[Feb+13*12]], TAMSATMonth.raster[[Feb+14*12]], TAMSATMonth.raster[[Feb+15*12]],
@@ -70,7 +71,7 @@ February <- sum(TAMSATMonth.raster[[Feb]], TAMSATMonth.raster[[Feb+12]], TAMSATM
                TAMSATMonth.raster[[Feb+36*12]], TAMSATMonth.raster[[Feb+37*12]], TAMSATMonth.raster[[Feb+38*12]], TAMSATMonth.raster[[Feb+39*12]]) 
 
 
-March <- sum(TAMSATMonth.raster[[Mar]], TAMSATMonth.raster[[Mar+12]], TAMSATMonth.raster[[Mar+2*12]], TAMSATMonth.raster[[Mar+3*12]],
+MarchMean <- mean(TAMSATMonth.raster[[Mar]], TAMSATMonth.raster[[Mar+12]], TAMSATMonth.raster[[Mar+2*12]], TAMSATMonth.raster[[Mar+3*12]],
              TAMSATMonth.raster[[Mar+4*12]], TAMSATMonth.raster[[Mar+5*12]], TAMSATMonth.raster[[Mar+6*12]], TAMSATMonth.raster[[Mar+7*12]],
              TAMSATMonth.raster[[Mar+8*12]], TAMSATMonth.raster[[Mar+9*12]], TAMSATMonth.raster[[Mar+10*12]], TAMSATMonth.raster[[Mar+11*12]],
              TAMSATMonth.raster[[Mar+12*12]], TAMSATMonth.raster[[Mar+13*12]], TAMSATMonth.raster[[Mar+14*12]], TAMSATMonth.raster[[Mar+15*12]],
@@ -79,9 +80,9 @@ March <- sum(TAMSATMonth.raster[[Mar]], TAMSATMonth.raster[[Mar+12]], TAMSATMont
              TAMSATMonth.raster[[Mar+24*12]], TAMSATMonth.raster[[Mar+25*12]], TAMSATMonth.raster[[Mar+26*12]], TAMSATMonth.raster[[Mar+27*12]],
              TAMSATMonth.raster[[Mar+28*12]], TAMSATMonth.raster[[Mar+29*12]], TAMSATMonth.raster[[Mar+30*12]], TAMSATMonth.raster[[Mar+31*12]],
              TAMSATMonth.raster[[Mar+32*12]], TAMSATMonth.raster[[Mar+33*12]], TAMSATMonth.raster[[Mar+34*12]], TAMSATMonth.raster[[Mar+35*12]],
-             TAMSATMonth.raster[[Mar+36*12]], TAMSATMonth.raster[[Mar+37*12]], TAMSATMonth.raster[[Mar+38*12]], TAMSATMonth.raster[[Mar+39*12]]) 
+             TAMSATMonth.raster[[Mar+36*12]], TAMSATMonth.raster[[Mar+37*12]], TAMSATMonth.raster[[Mar+38*12]], TAMSATMonth.raster[[Mar+39*12]])
 
-April <- sum(TAMSATMonth.raster[[Apr]], TAMSATMonth.raster[[Apr+12]], TAMSATMonth.raster[[Apr+2*12]], TAMSATMonth.raster[[Apr+3*12]],
+AprilMean <- mean(TAMSATMonth.raster[[Apr]], TAMSATMonth.raster[[Apr+12]], TAMSATMonth.raster[[Apr+2*12]], TAMSATMonth.raster[[Apr+3*12]],
              TAMSATMonth.raster[[Apr+4*12]], TAMSATMonth.raster[[Apr+5*12]], TAMSATMonth.raster[[Apr+6*12]], TAMSATMonth.raster[[Apr+7*12]],
              TAMSATMonth.raster[[Apr+8*12]], TAMSATMonth.raster[[Apr+9*12]], TAMSATMonth.raster[[Apr+10*12]], TAMSATMonth.raster[[Apr+11*12]],
              TAMSATMonth.raster[[Apr+12*12]], TAMSATMonth.raster[[Apr+13*12]], TAMSATMonth.raster[[Apr+14*12]], TAMSATMonth.raster[[Apr+15*12]],
@@ -92,7 +93,7 @@ April <- sum(TAMSATMonth.raster[[Apr]], TAMSATMonth.raster[[Apr+12]], TAMSATMont
              TAMSATMonth.raster[[Apr+32*12]], TAMSATMonth.raster[[Apr+33*12]], TAMSATMonth.raster[[Apr+34*12]], TAMSATMonth.raster[[Apr+35*12]],
              TAMSATMonth.raster[[Apr+36*12]], TAMSATMonth.raster[[Apr+37*12]], TAMSATMonth.raster[[Apr+38*12]], TAMSATMonth.raster[[Apr+39*12]]) 
 
-May <- sum(TAMSATMonth.raster[[M]], TAMSATMonth.raster[[M+12]], TAMSATMonth.raster[[M+2*12]], TAMSATMonth.raster[[M+3*12]],
+MayMean <- mean(TAMSATMonth.raster[[M]], TAMSATMonth.raster[[M+12]], TAMSATMonth.raster[[M+2*12]], TAMSATMonth.raster[[M+3*12]],
            TAMSATMonth.raster[[M+4*12]], TAMSATMonth.raster[[M+5*12]], TAMSATMonth.raster[[M+6*12]], TAMSATMonth.raster[[M+7*12]],
            TAMSATMonth.raster[[M+8*12]], TAMSATMonth.raster[[M+9*12]], TAMSATMonth.raster[[M+10*12]], TAMSATMonth.raster[[M+11*12]],
            TAMSATMonth.raster[[M+12*12]], TAMSATMonth.raster[[M+13*12]], TAMSATMonth.raster[[M+14*12]], TAMSATMonth.raster[[M+15*12]],
@@ -101,9 +102,9 @@ May <- sum(TAMSATMonth.raster[[M]], TAMSATMonth.raster[[M+12]], TAMSATMonth.rast
            TAMSATMonth.raster[[M+24*12]], TAMSATMonth.raster[[M+25*12]], TAMSATMonth.raster[[M+26*12]], TAMSATMonth.raster[[M+27*12]],
            TAMSATMonth.raster[[M+28*12]], TAMSATMonth.raster[[M+29*12]], TAMSATMonth.raster[[M+30*12]], TAMSATMonth.raster[[M+31*12]],
            TAMSATMonth.raster[[M+32*12]], TAMSATMonth.raster[[M+33*12]], TAMSATMonth.raster[[M+34*12]], TAMSATMonth.raster[[M+35*12]],
-           TAMSATMonth.raster[[M+36*12]], TAMSATMonth.raster[[M+37*12]], TAMSATMonth.raster[[M+38*12]], TAMSATMonth.raster[[M+39*12]]) 
+           TAMSATMonth.raster[[M+36*12]], TAMSATMonth.raster[[M+37*12]], TAMSATMonth.raster[[M+38*12]], TAMSATMonth.raster[[M+39*12]])
 
-June <- sum(TAMSATMonth.raster[[Jun]], TAMSATMonth.raster[[Jun+12]], TAMSATMonth.raster[[Jun+2*12]], TAMSATMonth.raster[[Jun+3*12]],
+JuneMean <- mean(TAMSATMonth.raster[[Jun]], TAMSATMonth.raster[[Jun+12]], TAMSATMonth.raster[[Jun+2*12]], TAMSATMonth.raster[[Jun+3*12]],
             TAMSATMonth.raster[[Jun+4*12]], TAMSATMonth.raster[[Jun+5*12]], TAMSATMonth.raster[[Jun+6*12]], TAMSATMonth.raster[[Jun+7*12]],
             TAMSATMonth.raster[[Jun+8*12]], TAMSATMonth.raster[[Jun+9*12]], TAMSATMonth.raster[[Jun+10*12]], TAMSATMonth.raster[[Jun+11*12]],
             TAMSATMonth.raster[[Jun+12*12]], TAMSATMonth.raster[[Jun+13*12]], TAMSATMonth.raster[[Jun+14*12]], TAMSATMonth.raster[[Jun+15*12]],
@@ -114,7 +115,7 @@ June <- sum(TAMSATMonth.raster[[Jun]], TAMSATMonth.raster[[Jun+12]], TAMSATMonth
             TAMSATMonth.raster[[Jun+32*12]], TAMSATMonth.raster[[Jun+33*12]], TAMSATMonth.raster[[Jun+34*12]], TAMSATMonth.raster[[Jun+35*12]],
             TAMSATMonth.raster[[Jun+36*12]], TAMSATMonth.raster[[Jun+37*12]], TAMSATMonth.raster[[Jun+38*12]], TAMSATMonth.raster[[Jun+39*12]])
 
-July <- sum(TAMSATMonth.raster[[Jul]], TAMSATMonth.raster[[Jul+12]], TAMSATMonth.raster[[Jul+2*12]], TAMSATMonth.raster[[Jul+3*12]],
+JulyMean <- mean(TAMSATMonth.raster[[Jul]], TAMSATMonth.raster[[Jul+12]], TAMSATMonth.raster[[Jul+2*12]], TAMSATMonth.raster[[Jul+3*12]],
             TAMSATMonth.raster[[Jul+4*12]], TAMSATMonth.raster[[Jul+5*12]], TAMSATMonth.raster[[Jul+6*12]], TAMSATMonth.raster[[Jul+7*12]],
             TAMSATMonth.raster[[Jul+8*12]], TAMSATMonth.raster[[Jul+9*12]], TAMSATMonth.raster[[Jul+10*12]], TAMSATMonth.raster[[Jul+11*12]],
             TAMSATMonth.raster[[Jul+12*12]], TAMSATMonth.raster[[Jul+13*12]], TAMSATMonth.raster[[Jul+14*12]], TAMSATMonth.raster[[Jul+15*12]],
@@ -125,7 +126,7 @@ July <- sum(TAMSATMonth.raster[[Jul]], TAMSATMonth.raster[[Jul+12]], TAMSATMonth
             TAMSATMonth.raster[[Jul+32*12]], TAMSATMonth.raster[[Jul+33*12]], TAMSATMonth.raster[[Jul+34*12]], TAMSATMonth.raster[[Jul+35*12]],
             TAMSATMonth.raster[[Jul+36*12]], TAMSATMonth.raster[[Jul+37*12]], TAMSATMonth.raster[[Jul+38*12]], TAMSATMonth.raster[[Jul+39*12]])
 
-August <- sum(TAMSATMonth.raster[[Aug]], TAMSATMonth.raster[[Aug+12]], TAMSATMonth.raster[[Aug+2*12]], TAMSATMonth.raster[[Aug+3*12]],
+AugustMean <- mean(TAMSATMonth.raster[[Aug]], TAMSATMonth.raster[[Aug+12]], TAMSATMonth.raster[[Aug+2*12]], TAMSATMonth.raster[[Aug+3*12]],
               TAMSATMonth.raster[[Aug+4*12]], TAMSATMonth.raster[[Aug+5*12]], TAMSATMonth.raster[[Jul+6*12]], TAMSATMonth.raster[[Aug+7*12]],
               TAMSATMonth.raster[[Aug+8*12]], TAMSATMonth.raster[[Aug+9*12]], TAMSATMonth.raster[[Jul+10*12]], TAMSATMonth.raster[[Aug+11*12]],
               TAMSATMonth.raster[[Aug+12*12]], TAMSATMonth.raster[[Aug+13*12]], TAMSATMonth.raster[[Jul+14*12]], TAMSATMonth.raster[[Aug+15*12]],
@@ -137,7 +138,7 @@ August <- sum(TAMSATMonth.raster[[Aug]], TAMSATMonth.raster[[Aug+12]], TAMSATMon
               TAMSATMonth.raster[[Aug+36*12]], TAMSATMonth.raster[[Aug+37*12]], TAMSATMonth.raster[[Jul+38*12]], TAMSATMonth.raster[[Aug+39*12]])
 
 
-September <- sum(TAMSATMonth.raster[[Sep]], TAMSATMonth.raster[[Sep+12]], TAMSATMonth.raster[[Sep+2*12]], TAMSATMonth.raster[[Sep+3*12]],
+SeptemberMean <- mean(TAMSATMonth.raster[[Sep]], TAMSATMonth.raster[[Sep+12]], TAMSATMonth.raster[[Sep+2*12]], TAMSATMonth.raster[[Sep+3*12]],
                  TAMSATMonth.raster[[Sep+4*12]], TAMSATMonth.raster[[Sep+5*12]], TAMSATMonth.raster[[Sep+7*12]],
                  TAMSATMonth.raster[[Sep+8*12]], TAMSATMonth.raster[[Sep+9*12]], TAMSATMonth.raster[[Sep+10*12]], TAMSATMonth.raster[[Sep+11*12]],
                  TAMSATMonth.raster[[Sep+12*12]], TAMSATMonth.raster[[Sep+13*12]], TAMSATMonth.raster[[Sep+14*12]], TAMSATMonth.raster[[Sep+15*12]],
@@ -148,7 +149,7 @@ September <- sum(TAMSATMonth.raster[[Sep]], TAMSATMonth.raster[[Sep+12]], TAMSAT
                  TAMSATMonth.raster[[Sep+32*12]], TAMSATMonth.raster[[Sep+33*12]], TAMSATMonth.raster[[Sep+34*12]], TAMSATMonth.raster[[Sep+35*12]],
                  TAMSATMonth.raster[[Sep+36*12]], TAMSATMonth.raster[[Sep+37*12]], TAMSATMonth.raster[[Sep+38*12]], TAMSATMonth.raster[[Sep+39*12]])
 
-October <- sum(TAMSATMonth.raster[[Oct]], TAMSATMonth.raster[[Oct+12]], TAMSATMonth.raster[[Oct+2*12]], TAMSATMonth.raster[[Oct+3*12]],
+OctoberMean <- mean(TAMSATMonth.raster[[Oct]], TAMSATMonth.raster[[Oct+12]], TAMSATMonth.raster[[Oct+2*12]], TAMSATMonth.raster[[Oct+3*12]],
                TAMSATMonth.raster[[Oct+4*12]], TAMSATMonth.raster[[Oct+5*12]], TAMSATMonth.raster[[Oct+6*12]], TAMSATMonth.raster[[Oct+7*12]],
                TAMSATMonth.raster[[Oct+8*12]], TAMSATMonth.raster[[Oct+9*12]], TAMSATMonth.raster[[Oct+10*12]], TAMSATMonth.raster[[Oct+11*12]],
                TAMSATMonth.raster[[Oct+12*12]], TAMSATMonth.raster[[Oct+14*12]], TAMSATMonth.raster[[Oct+15*12]],
@@ -159,7 +160,7 @@ October <- sum(TAMSATMonth.raster[[Oct]], TAMSATMonth.raster[[Oct+12]], TAMSATMo
                TAMSATMonth.raster[[Oct+32*12]], TAMSATMonth.raster[[Oct+33*12]], TAMSATMonth.raster[[Oct+34*12]], TAMSATMonth.raster[[Oct+35*12]],
                TAMSATMonth.raster[[Oct+36*12]], TAMSATMonth.raster[[Oct+37*12]], TAMSATMonth.raster[[Oct+38*12]], TAMSATMonth.raster[[Oct+39*12]])
 
-November <- sum(TAMSATMonth.raster[[Nov]], TAMSATMonth.raster[[Nov+12]], TAMSATMonth.raster[[Nov+2*12]], TAMSATMonth.raster[[Nov+3*12]],
+NovemberMean <- mean(TAMSATMonth.raster[[Nov]], TAMSATMonth.raster[[Nov+12]], TAMSATMonth.raster[[Nov+2*12]], TAMSATMonth.raster[[Nov+3*12]],
                 TAMSATMonth.raster[[Nov+4*12]], TAMSATMonth.raster[[Nov+6*12]], TAMSATMonth.raster[[Nov+7*12]],
                 TAMSATMonth.raster[[Nov+8*12]], TAMSATMonth.raster[[Nov+9*12]], TAMSATMonth.raster[[Nov+10*12]], TAMSATMonth.raster[[Nov+11*12]],
                 TAMSATMonth.raster[[Nov+12*12]], TAMSATMonth.raster[[Nov+13*12]], TAMSATMonth.raster[[Nov+14*12]], TAMSATMonth.raster[[Nov+15*12]],
@@ -170,7 +171,7 @@ November <- sum(TAMSATMonth.raster[[Nov]], TAMSATMonth.raster[[Nov+12]], TAMSATM
                 TAMSATMonth.raster[[Nov+32*12]], TAMSATMonth.raster[[Nov+33*12]], TAMSATMonth.raster[[Nov+34*12]], TAMSATMonth.raster[[Nov+35*12]],
                 TAMSATMonth.raster[[Nov+36*12]], TAMSATMonth.raster[[Nov+37*12]], TAMSATMonth.raster[[Nov+38*12]], TAMSATMonth.raster[[Nov+39*12]])
 
-December <- sum(TAMSATMonth.raster[[Dec]], TAMSATMonth.raster[[Dec+12]], TAMSATMonth.raster[[Dec+2*12]], TAMSATMonth.raster[[Dec+3*12]],
+DecemberMean <- mean(TAMSATMonth.raster[[Dec]], TAMSATMonth.raster[[Dec+12]], TAMSATMonth.raster[[Dec+2*12]], TAMSATMonth.raster[[Dec+3*12]],
                 TAMSATMonth.raster[[Dec+4*12]], TAMSATMonth.raster[[Dec+6*12]], TAMSATMonth.raster[[Dec+7*12]],
                 TAMSATMonth.raster[[Dec+8*12]], TAMSATMonth.raster[[Dec+9*12]], TAMSATMonth.raster[[Dec+10*12]], TAMSATMonth.raster[[Dec+11*12]],
                 TAMSATMonth.raster[[Dec+12*12]], TAMSATMonth.raster[[Dec+13*12]], TAMSATMonth.raster[[Dec+14*12]], TAMSATMonth.raster[[Dec+15*12]],
@@ -180,17 +181,3 @@ December <- sum(TAMSATMonth.raster[[Dec]], TAMSATMonth.raster[[Dec+12]], TAMSATM
                 TAMSATMonth.raster[[Dec+28*12]], TAMSATMonth.raster[[Dec+29*12]], TAMSATMonth.raster[[Dec+30*12]], TAMSATMonth.raster[[Dec+31*12]],
                 TAMSATMonth.raster[[Dec+32*12]], TAMSATMonth.raster[[Dec+33*12]], TAMSATMonth.raster[[Dec+34*12]], TAMSATMonth.raster[[Dec+35*12]],
                 TAMSATMonth.raster[[Dec+36*12]], TAMSATMonth.raster[[Dec+37*12]], TAMSATMonth.raster[[Dec+38*12]], TAMSATMonth.raster[[Dec+39*12]])
-#-------------------------------------------------------------------------------
-#Create dataset of means
-JanuaryMean <- January / 38
-FebruaryMean <- February / 38
-MarchMean <- March / 40
-AprilMean <- April / 40
-MayMean <- May / 40
-JuneMean <- June / 40
-JulyMean <- July / 40
-AugustMean <- August / 40
-SeptemberMean <- September / 39
-OctoberMean <- October / 39
-NovemberMean <- November / 39
-DecemberMean <- December / 39
