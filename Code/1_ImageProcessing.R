@@ -10,7 +10,6 @@ TAMSATMonth.raster <- list()
 #Get variables 
 lon <- ncvar_get(TAMSATMonth.nc, "X")
 lat <- ncvar_get(TAMSATMonth.nc, "Y")
-time <- ncvar_get(TAMSATMonth.nc, "T")
 rainfall <- ncvar_get(TAMSATMonth.nc, "rfe")
 
 tic("Loading all TAMSAT Months")
